@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title><%= title_for(current_page) %></title>
+    <meta name="description" content="<%= current_page.data.description %>" />
+
+    <%= stylesheet_link_tag "application" %>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <link rel="shortcut icon" href="<%= image_path('favicon.png') %>">
+
+    <!-- fonts -->
+    <script type="text/javascript" src="http://use.typekit.net/xfs6zus.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="docs">
+        <a class="vagrant-docs-logo" href="/">Vagrant Documentation</a>
+        <ul class="pull-right unstyled">
+          <%= navbar.item("VMware Integration", "/vmware") %>
+          <%= navbar.item("Downloads", "/downloads.html") %>
+          <%= navbar.item("Documentation", "/docs") %>
+          <%= navbar.item("About", "/about.html") %>
+        </ul>
+      </nav>
+
+      <%= yield %>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-unstyled footer-nav">
+                <li><a href="/docs">Documentation</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/support.html">Support</a></li>
+                <a href="/downloads.html">
+                  <li class="button inline-button">Download</li>
+                </a>
+              </ul>
+
+              <ul class="list-unstyled logos">
+                <a href="<%= base_url %>">
+                  <li class="vagrant-logo-monochrome"></li>
+                </a>
+                <li><span>by</span></li>
+                <a href="http://www.hashicorp.com">
+                  <li class="hashi-logo-monochrome "></li>
+                </a>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <h6 class="legal">
+              Copyright &copy; <%= Time.now.year %> HashiCorp
+            </h6>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-15091924-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+    </script>
+
+    <%= javascript_include_tag "application" %>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag "ie-compat" %>
+    <![endif]-->
+
+    <script>
+      $(".big-background").backstretch("assets/photos/full_width.jpg");
+    </script>
+  </body>
+</html>

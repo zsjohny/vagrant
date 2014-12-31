@@ -1,0 +1,22 @@
+Vagrant.configure(2) do |config|
+  config.vm.box = "hashicorp/precise64"
+
+  config.vm.synced_folder ".", "/vagrant", type: "rsync",
+    rsync__exclude: ".git/"
+
+  config.vm.provision "shell", privileged: false, inline: <<-SCRIPT
+    sudo apt-get -y update
+    sudo apt-get -y install curl wget build-essential
+
+    curl -sSL https://get.rvm.io | bash -s stable
+
+    source ~/.bashrc
+    source ~/.bash_profile
+
+    rvm install 2.0.0
+    rvm --default use 2.0.0
+
+    cd /vagrant
+    bundle
+  SCRIPT
+end

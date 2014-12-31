@@ -1,0 +1,235 @@
+<div class="sidebar col-sm-3">
+  <aside class="sidebar-nav">
+    <div class="toggle visible-sm">
+      <div class="open-close open"></div>
+      <a href="#">Contents</a>
+    </div>
+
+    <ul class="list-unstyled">
+      <%= sidebar.item("overview", "Overview", "/docs") %>
+      <%= sidebar.item("why", "Why Vagrant?", "/docs/why-vagrant") %>
+
+      <%= sidebar.item("installation", "Installation", "/docs/installation") %>
+      <% if sidebar.section?("installation") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("installation-backwards-compatibility", "Backwards Compatibility", "/docs/installation/backwards-compatibility.html") %>
+          <%= sidebar.item("installation-upgrading", "Upgrading", "/docs/installation/upgrading.html") %>
+          <%= sidebar.item("installation-upgrading-1-0", "Upgrading from 1.0.x", "/docs/installation/upgrading-from-1-0.html") %>
+          <%= sidebar.item("installation-uninstallation", "Uninstallation", "/docs/installation/uninstallation.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("gettingstarted", "Getting Started", "/docs/getting-started") %>
+      <% if sidebar.section?("gettingstarted") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("gettingstarted-projectsetup", "Project Setup", "/docs/getting-started/project_setup.html") %>
+          <%= sidebar.item("gettingstarted-boxes", "Boxes", "/docs/getting-started/boxes.html") %>
+          <%= sidebar.item("gettingstarted-up", "Up and SSH", "/docs/getting-started/up.html") %>
+          <%= sidebar.item("gettingstarted-syncedfolders", "Synced Folders", "/docs/getting-started/synced_folders.html") %>
+          <%= sidebar.item("gettingstarted-provisioning", "Provisioning", "/docs/getting-started/provisioning.html") %>
+          <%= sidebar.item("gettingstarted-networking", "Networking", "/docs/getting-started/networking.html") %>
+          <%= sidebar.item("gettingstarted-share", "Share", "/docs/getting-started/share.html") %>
+          <%= sidebar.item("gettingstarted-teardown", "Teardown", "/docs/getting-started/teardown.html") %>
+          <%= sidebar.item("gettingstarted-rebuild", "Rebuild", "/docs/getting-started/rebuild.html") %>
+          <%= sidebar.item("gettingstarted-providers", "Providers", "/docs/getting-started/providers.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("cli", "Command-Line Interface", "/docs/cli") %>
+      <% if sidebar.section?("cli") %>
+        <ul class="sub list-unstyled nocap">
+          <%= sidebar.item("cli-box", "box", "/docs/cli/box.html") %>
+          <%= sidebar.item("cli-connect", "connect", "/docs/cli/connect.html") %>
+          <%= sidebar.item("cli-destroy", "destroy", "/docs/cli/destroy.html") %>
+          <%= sidebar.item("cli-globalstatus", "global-status", "/docs/cli/global-status.html") %>
+          <%= sidebar.item("cli-halt", "halt", "/docs/cli/halt.html") %>
+          <%= sidebar.item("cli-init", "init", "/docs/cli/init.html") %>
+          <%= sidebar.item("cli-login", "login", "/docs/cli/login.html") %>
+          <%= sidebar.item("cli-package", "package", "/docs/cli/package.html") %>
+          <%= sidebar.item("cli-plugin", "plugin", "/docs/cli/plugin.html") %>
+          <%= sidebar.item("cli-provision", "provision", "/docs/cli/provision.html") %>
+          <%= sidebar.item("cli-rdp", "rdp", "/docs/cli/rdp.html") %>
+          <%= sidebar.item("cli-reload", "reload", "/docs/cli/reload.html") %>
+          <%= sidebar.item("cli-resume", "resume", "/docs/cli/resume.html") %>
+          <%= sidebar.item("cli-share", "share", "/docs/cli/share.html") %>
+          <%= sidebar.item("cli-ssh", "ssh", "/docs/cli/ssh.html") %>
+          <%= sidebar.item("cli-ssh_config", "ssh-config", "/docs/cli/ssh_config.html") %>
+          <%= sidebar.item("cli-status", "status", "/docs/cli/status.html") %>
+          <%= sidebar.item("cli-suspend", "suspend", "/docs/cli/suspend.html") %>
+          <%= sidebar.item("cli-up", "up", "/docs/cli/up.html") %>
+          <%= sidebar.item("cli-version", "version", "/docs/cli/version.html") %>
+          <%= sidebar.item("cli-nonprimary", "More Commands", "/docs/cli/non-primary.html") %>
+          <%= sidebar.item("cli-machinereadable", "Machine Readable Output", "/docs/cli/machine-readable.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("share", "Vagrant Share", "/docs/share") %>
+      <% if sidebar.section?("share") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("share-http", "HTTP Sharing", "/docs/share/http.html") %>
+          <%= sidebar.item("share-ssh", "SSH Sharing", "/docs/share/ssh.html") %>
+          <%= sidebar.item("share-connect", "vagrant connect", "/docs/share/connect.html") %>
+          <%= sidebar.item("share-security", "Security", "/docs/share/security.html") %>
+          <%= sidebar.item("share-provider", "Custom Provider", "/docs/share/provider.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("vagrantfile", "Vagrantfile", "/docs/vagrantfile") %>
+      <% if sidebar.section?("vagrantfile") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("vagrantfile-version", "Configuration Version", "/docs/vagrantfile/version.html") %>
+          <%= sidebar.item("vagrantfile-vagrantversion", "Minimum Vagrant Version", "/docs/vagrantfile/vagrant_version.html") %>
+          <%= sidebar.item("vagrantfile-tips", "Tips & Tricks", "/docs/vagrantfile/tips.html") %>
+          <%= sidebar.item("vagrantfile-machine", "config.vm", "/docs/vagrantfile/machine_settings.html") %>
+          <%= sidebar.item("vagrantfile-ssh", "config.ssh", "/docs/vagrantfile/ssh_settings.html") %>
+          <%= sidebar.item("vagrantfile-winrm", "config.winrm", "/docs/vagrantfile/winrm_settings.html") %>
+          <%= sidebar.item("vagrantfile-vagrant", "config.vagrant", "/docs/vagrantfile/vagrant_settings.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("boxes", "Boxes", "/docs/boxes.html") %>
+      <% if sidebar.section?("boxes") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("boxes-versioning", "Box Versioning", "/docs/boxes/versioning.html") %>
+          <%= sidebar.item("boxes-base", "Creating a Base Box", "/docs/boxes/base.html") %>
+          <%= sidebar.item("boxes-format", "Box File Format", "/docs/boxes/format.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("provisioning", "Provisioning", "/docs/provisioning") %>
+      <% if sidebar.section?("provisioning") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("provisioning-basic", "Basic Usage", "/docs/provisioning/basic_usage.html") %>
+          <%= sidebar.item("provisioning-file", "File", "/docs/provisioning/file.html") %>
+          <%= sidebar.item("provisioning-shell", "Shell", "/docs/provisioning/shell.html") %>
+          <%= sidebar.item("provisioning-ansible", "Ansible", "/docs/provisioning/ansible.html") %>
+          <%= sidebar.item("provisioning-cfengine", "CFEngine", "/docs/provisioning/cfengine.html") %>
+          <%= sidebar.item("provisioning-chefsolo", "Chef Solo", "/docs/provisioning/chef_solo.html") %>
+          <%= sidebar.item("provisioning-chefzero", "Chef Zero", "/docs/provisioning/chef_zero.html") %>
+          <%= sidebar.item("provisioning-chefclient", "Chef Client", "/docs/provisioning/chef_client.html") %>
+          <%= sidebar.item("provisioning-chefapply", "Chef Apply", "/docs/provisioning/chef_apply.html") %>
+          <%= sidebar.item("provisioning-docker", "Docker", "/docs/provisioning/docker.html") %>
+          <%= sidebar.item("provisioning-puppetapply", "Puppet Apply", "/docs/provisioning/puppet_apply.html") %>
+          <%= sidebar.item("provisioning-puppetagent", "Puppet Agent", "/docs/provisioning/puppet_agent.html") %>
+          <%= sidebar.item("provisioning-salt", "Salt", "/docs/provisioning/salt.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("networking", "Networking", "/docs/networking") %>
+      <% if sidebar.section?("networking") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("networking-basic", "Basic Usage", "/docs/networking/basic_usage.html") %>
+          <%= sidebar.item("networking-fp", "Forwarded Ports", "/docs/networking/forwarded_ports.html") %>
+          <%= sidebar.item("networking-private", "Private Network", "/docs/networking/private_network.html") %>
+          <%= sidebar.item("networking-public", "Public Network", "/docs/networking/public_network.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("syncedfolder", "Synced Folders", "/docs/synced-folders") %>
+      <% if sidebar.section?("syncedfolder") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("syncedfolder-basic", "Basic Usage", "/docs/synced-folders/basic_usage.html") %>
+          <%= sidebar.item("syncedfolder-nfs", "NFS", "/docs/synced-folders/nfs.html") %>
+          <%= sidebar.item("syncedfolder-rsync", "RSync", "/docs/synced-folders/rsync.html") %>
+          <%= sidebar.item("syncedfolder-smb", "SMB", "/docs/synced-folders/smb.html") %>
+          <%= sidebar.item("syncedfolder-virtualbox", "VirtualBox", "/docs/synced-folders/virtualbox.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("multimachine", "Multi-Machine", "/docs/multi-machine") %>
+
+      <%= sidebar.item("providers", "Providers", "/docs/providers") %>
+      <% if sidebar.section?("providers") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("providers-installation", "Installation", "/docs/providers/installation.html") %>
+          <%= sidebar.item("providers-basic-usage", "Basic Usage", "/docs/providers/basic_usage.html") %>
+          <%= sidebar.item("providers-configuration", "Configuration", "/docs/providers/configuration.html") %>
+          <%= sidebar.item("providers-default", "Default Provider", "/docs/providers/default.html") %>
+          <%= sidebar.item("providers-virutalbox", "Virtualbox", "/docs/virtualbox")%>
+          <%= sidebar.item("providers-vmware", "VMware", "/docs/vmware")%>
+          <%= sidebar.item("providers-docker", "Docker", "/docs/docker")%>
+          <%= sidebar.item("providers-hyperv", "Hyper-V", "/docs/hyperv")%>
+          <%= sidebar.item("providers-customer", "Custom Provider", "/docs/providers/custom.html")%>
+        </ul>
+      <% end %>
+
+      <% if sidebar.section?("docker") %>
+        <%= sidebar.item("docker", "Docker", "/docs/docker") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("docker-basics", "Basic Usage", "/docs/docker/basics.html") %>
+          <%= sidebar.item("docker-commands", "Commands", "/docs/docker/commands.html") %>
+          <%= sidebar.item("docker-boxes", "Boxes", "/docs/docker/boxes.html") %>
+          <%= sidebar.item("docker-configuration", "Configuration", "/docs/docker/configuration.html") %>
+        </ul>
+      <% end %>
+
+      <% if sidebar.section?("virtualbox") %>
+        <%= sidebar.item("virtualbox", "VirtualBox", "/docs/virtualbox") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("virtualbox-usage", "Usage", "/docs/virtualbox/usage.html") %>
+          <%= sidebar.item("virtualbox-boxes", "Creating a Base Box", "/docs/virtualbox/boxes.html") %>
+          <%= sidebar.item("virtualbox-configuration", "Configuration", "/docs/virtualbox/configuration.html") %>
+          <%= sidebar.item("virtualbox-networking", "Networking", "/docs/virtualbox/networking.html") %>
+          <%= sidebar.item("virtualbox-issues", "Common Issues", "/docs/virtualbox/common-issues.html") %>
+        </ul>
+      <% end %>
+
+      <% if sidebar.section?("vmware") %>
+        <%= sidebar.item("vmware", "VMware", "/docs/vmware") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("vmware-installation", "Installation", "/docs/vmware/installation.html") %>
+          <%= sidebar.item("vmware-usage", "Usage", "/docs/vmware/usage.html") %>
+          <%= sidebar.item("vmware-boxes", "Boxes", "/docs/vmware/boxes.html") %>
+          <%= sidebar.item("vmware-configuration", "Configuration", "/docs/vmware/configuration.html") %>
+          <%= sidebar.item("vmware-known-issues", "Known Issues", "/docs/vmware/known-issues.html") %>
+          <%= sidebar.item("vmware-kernel-upgrade", "Kernel Upgrade", "/docs/vmware/kernel-upgrade.html") %>
+        </ul>
+      <% end %>
+
+      <% if sidebar.section?("hyperv") %>
+        <%= sidebar.item("hyperv", "Hyper-V", "/docs/hyperv") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("hyperv-usage", "Usage", "/docs/hyperv/usage.html") %>
+          <%= sidebar.item("hyperv-boxes", "Creating a Base Box", "/docs/hyperv/boxes.html") %>
+          <%= sidebar.item("hyperv-configuration", "Configuration", "/docs/hyperv/configuration.html") %>
+          <%= sidebar.item("hyperv-limitations", "Limitations", "/docs/hyperv/limitations.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("plugins", "Plugins", "/docs/plugins") %>
+      <% if sidebar.section?("plugins") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("plugins-usage", "Usage", "/docs/plugins/usage.html") %>
+          <%= sidebar.item("plugins-development-basics", "Plugin Development Basics", "/docs/plugins/development-basics.html") %>
+          <%= sidebar.item("plugins-commands", "Commands", "/docs/plugins/commands.html") %>
+          <%= sidebar.item("plugins-configuration", "Configuration", "/docs/plugins/configuration.html") %>
+          <%= sidebar.item("plugins-guests", "Guests", "/docs/plugins/guests.html") %>
+          <%= sidebar.item("plugins-guestcapabilities", "Guest Capabilities", "/docs/plugins/guest-capabilities.html") %>
+          <%= sidebar.item("plugins-hosts", "Hosts", "/docs/plugins/hosts.html") %>
+          <%= sidebar.item("plugins-hostcapabilities", "Host Capabilities", "/docs/plugins/host-capabilities.html") %>
+          <%= sidebar.item("plugins-providers", "Providers", "/docs/plugins/providers.html") %>
+          <%= sidebar.item("plugins-provisioners", "Provisioners", "/docs/plugins/provisioners.html") %>
+          <%= sidebar.item("plugins-packaging", "Packaging & Distribution", "/docs/plugins/packaging.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("push", "Push", "/docs/push") %>
+      <% if sidebar.section?("push") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("push-atlas", "Atlas", "/docs/push/atlas.html") %>
+          <%= sidebar.item("push-ftp", "FTP / SFTP", "/docs/push/ftp.html") %>
+          <%= sidebar.item("push-heroku", "Heroku", "/docs/push/heroku.html") %>
+          <%= sidebar.item("push-local-exec", "Local Exec", "/docs/push/local-exec.html") %>
+        </ul>
+      <% end %>
+
+      <%= sidebar.item("other", "Other", "/docs/other") %>
+      <% if sidebar.section?("other") %>
+        <ul class="sub list-unstyled">
+          <%= sidebar.item("other-debugging", "Debugging", "/docs/other/debugging.html") %>
+          <%= sidebar.item("other-envvars", "Environmental Variables", "/docs/other/environmental-variables.html") %>
+        </ul>
+      <% end %>
+    </ul>
+  </aside>
+</div>

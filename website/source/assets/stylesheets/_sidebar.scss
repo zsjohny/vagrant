@@ -1,0 +1,132 @@
+.sidebar {
+  h1 {
+    text-align: left;
+    color: $white;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-size: 15px;
+    color: $dark-blue-text;
+    letter-spacing: 3px;
+  }
+
+  .toggle {
+    font-size: 20px;
+    @include museo-sans-light;
+    color: $white;
+    margin-left: 20px;
+    padding: 20px 0;
+
+    a {
+      display: block;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .open-close {
+      background: image-url("open_close.png") no-repeat 0 0;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      right: 0;
+      top: 25px;
+    }
+  }
+
+  .sidebar-nav {
+    // position:fixed;
+  }
+
+  ul {
+    li {
+      font-size: 20px;
+      @include museo-sans-light;
+
+      a {
+        display: block;
+      }
+
+      &:hover {}
+    }
+
+    ul.sub {
+      border-top: none;
+      list-style-type: none;
+      margin:0 0 5px 0;
+
+      li {
+        padding: 5px 0 5px 20px;
+        font-size: 15px;
+        border: none;
+        border-bottom: none !important;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: block !important;
+    }
+  }
+
+  .inner & {
+    @include padded;
+    position:fixed;
+
+    li.current a {
+      color: $purple;
+    }
+
+    ul {
+      li {
+        color: $dark-blue-text;
+        padding: 20px 0;
+        border-top: 1px solid fade($white, 40%);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.current {}
+      }
+    }
+  }
+
+  .docs & {
+    li.current a {
+      color: $blue;
+    }
+
+    ul {
+      &.nocap {
+        li {
+          text-transform: none;
+        }
+      }
+
+      li {
+        text-transform: capitalize;
+        color: $white;
+        padding: 12px 0;
+        border-top: 1px solid fade($white, 20%);
+
+        a.nocap {
+          text-transform: none;
+        }
+
+        &:first-child {
+          border-top: none;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.current {}
+      }
+    }
+  }
+}

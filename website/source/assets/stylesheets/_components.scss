@@ -1,0 +1,67 @@
+table.mr-types {
+  th.mr-type {
+    width: 200px;
+  }
+}
+
+.search-bar {
+  border-bottom: 1px solid fade($black, 10%);
+  position: relative;
+  z-index: 99999;
+  margin-bottom: -1px;
+
+  .search-icon {
+    height: 60px;
+    width: 40px;
+    background: image-url("search_icon.png") no-repeat 0 center;
+  }
+
+  .search {
+    background: $white;
+    height: 60px;
+
+    input, button, form {
+      @include kill-effects;
+      border: none;
+      height: 60px;
+      font-size: 20px;
+      @include museo-sans-light-italic;
+    }
+
+    input {
+      margin:0;
+      padding: 0 0 0 0;
+      font-size: 20px;
+
+      &:focus {}
+    }
+
+    button {
+      padding: 0 20px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.pagination {
+  height: 80px;
+  background: $gray-background;
+  padding: 0;
+  margin:0 auto;
+  text-transform: uppercase;
+  color: $blue-text;
+  z-index: 999;
+  position:relative;
+
+  a.previous, a.next {
+    padding: 25px 0;
+  }
+
+  a.previous {
+    margin-left: 20px;
+  }
+
+  a.next {
+    margin-right: 20px;
+  }
+}

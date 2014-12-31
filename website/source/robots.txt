@@ -1,0 +1,10 @@
+---
+layout: false
+noindex: true
+---
+
+User-agent: *
+Disallow: /404
+Disallow: /500
+Disallow: /latest-version.json
+Disallow: /latest-version.txt
