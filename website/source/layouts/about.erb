@@ -5,7 +5,20 @@
         <div class="page-contents col-md-9">
           <div class="page-background"></div>
           <div class="row">
-            <%= partial "partials/nav_about" %>
+            <div class="sidebar col-sm-3">
+              <aside class="sidebar-nav">
+                <div class="toggle visible-sm">
+                  <div class="open-close open"></div>
+                  <a href="#">Contents</a>
+                </div>
+
+                <ul class="list-unstyled">
+                  <%= sidebar.item("about", "About Vagrant", "/about.html") %>
+                  <%= sidebar.item("support", "Support", "/support.html") %>
+                  <%= sidebar.item("sponsors", "Sponsors", "/sponsors.html") %>
+                </ul>
+              </aside>
+            </div>
 
             <div class="col-md-8 col-md-offset-1">
               <%= yield %>
